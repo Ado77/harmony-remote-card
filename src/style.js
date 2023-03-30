@@ -26,9 +26,6 @@ const style = css`
     color: var(--primary-text-color);
   }
 
-  .harmony {
-  }
-
   .activities {
     display: flex;
     flex-wrap: wrap;
@@ -36,6 +33,21 @@ const style = css`
     margin-right: -0.5rem;
     justify-content: center;
   }
+
+  .activities button, 
+  .devices button {
+    background-color: var(--secondary-color);
+    color: var(--primary-text-color);
+    border: 1px solid var(--light-secondary-color);
+  }
+
+  .activities button.active-color, 
+  .devices button.active-color,
+  .active-color {
+    background-color: var(--primary-color);
+    border: 1px solid var(--light-primary-color);
+  }
+
 
   .devices {
     display: flex;
@@ -74,21 +86,22 @@ const style = css`
     transform: rotate(90deg);
   }
 
-  .active-color {
-    background-color: var(--light-primary-color);
-    border: 1px solid var(--primary-color);
-  }
-
   .remote-container .commands {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     margin-top: -0.5rem;
     justify-content: center;
   }
 
   .remote-container .commands button {
+    width: 23.4%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 0.5rem;
-    margin-right: 0.5rem;
+    white-space: normal;
+    word-break: break-word;
   }
 `;
 
